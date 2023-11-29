@@ -1,5 +1,7 @@
 import logging, verboselogs
 
+from tmp.myfunc import myFunc
+
 verboselogs.install()
 logger = verboselogs.VerboseLogger(__name__)
 logger.addHandler(logging.StreamHandler())
@@ -25,3 +27,6 @@ logger.notice("notice!")
 logger.warning("warning danger will robinson")
 logger.success("success!")
 logger.error("Error!")
+
+# single logger instance test
+myFunc()
